@@ -1,0 +1,67 @@
+-- database: /home/xs450-akatag/go-backend/db/mydb.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+Create Table Library(
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NAME VARCHAR(255) UNIQUE
+);
+
+DROP TABLE Users;
+ 
+CREATE TABLE Users(
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name VARCHAR(255),
+    Email VARCHAR(255) UNIQUE,
+    ContactNumber varchar(25),
+    Role VARCHAR(20) CHECK( Role IN ('Owner','Admin','Reader')),
+    LibID INT,
+    FOREIGN KEY(LibID) REFERENCES Library(ID)
+);
+
+CREATE TABLE BookInventory(
+    ISBN VARCHAR(20) PRIMARY KEY,
+    LibID INT,
+    Title  VARCHAR(20),
+    Authors TEXT,
+    Publisher VARCHAR(255),
+    Version int,
+    TotalCopies INT,
+    AvailableCopies INT,
+    FOREIGN KEY(LibID) REFERENCES Library(ID)
+);
+
+DROP TABLE RequestEvents;
+
+CREATE TABLE RequestEvents(
+    ReqID INTEGER PRIMARY KEY AUTOINCREMENT,
+    BookID varchar(15),
+    ReaderID INT,
+    RequestDate DATE,
+    ApprovalDate VARCHAR(255),
+    ApproverID INT,
+    RequestType VARCHAR(20) CHECK(RequestType IN("Issue","Return")),
+    Request VARCHAR(20) CHECK(Request IN("Approved","Rejected")),
+    foreign key(BookID) references BookInventory(ISBN),
+    foreign key(ReaderID) references Users(ID),
+    foreign key(ApproverID) references Users(ID)
+);
+ 
+ DROP TABLE IssueRegistry;
+CREATE TABLE IssueRegistry(
+    IssueID INTEGER PRIMARY KEY autoincrement,
+    ISBN varchar(20),
+    ReaderID INT,
+    IssueApproverID INT,
+    IssueStatus varchar(20) CHECK(IssueStatus IN('Issue','Return','Rejected')),
+    IssueDate DATE,
+    ExpectedReturnDate DATE,
+    ReturnDate DATE,
+    ReturnApproverID INT,
+    
+    FOREIGN KEY(ISBN) references BookInventory(ISBN),
+    FOREIGN KEY(ReaderID) references Users(ID),
+    Foreign key(IssueApproverID) references Users(ID),
+    foreign key(ReturnApproverID) references Users(ID)
+);
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Book</title>
+    <style>
+        .form-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 300px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+        .form-container input{
+            border-radius: 5px;
+			margin: 10px;
+			padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+        <form class="form-container" action="/user/issue-request" method="post">
+            <h1>Issue Request</h1>
+            <input type="text" placeholder="ISBN" name="isbn" required></label><br>
+            <input type="number" placeholder="UserID" name="rid" required></label><br>
+            <input type="text" placeholder="Request Type" name="Rtype" required></label><br>
+            <input type="submit" value="Submit">
+        </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0">
+    
+    <title>Add Book</title>
+    <style>
+        .form-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 300px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+        .box input{
+            border-radius: 5px;
+			margin: 10px;
+			padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Add Book</h1>
+        <form class="box" action="/admin/add-book" method="post">
+            <input type="text" placeholder="ISBN" name="isbn" required><br>
+            <input type="number" placeholder="LibID" name="lib_id" required><br>
+            <input type="text" placeholder="Title" name="title" required><br>
+            <input type="text" placeholder="Author" name="author" required><br>
+            <input type="text" placeholder="Publisher" name="publisher" required><br>
+            <input type="number" placeholder="Version" name="version" required><br>
+            <input type="number" placeholder="Total Copies" name="total_copies" required><br>
+            <input type="number" placeholder="Available Copies" name="available_copies" required><br>
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+    <!-- <script src="../script/addbook.js" defer></script> -->
+</body>
+
+</html>

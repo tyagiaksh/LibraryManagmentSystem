@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: center;
+        }
+        .main{
+         text-decoration: none;
+         font-size: 40px;
+         font-family:Arial, Helvetica, sans-serif;
+         font-style: oblique;
+         color: blue;
+         position: fixed;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container a{
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            font-size: 28px;
+            margin-top: 50px;
+        }
+        .logout{
+            text-decoration: none;
+            font-size: 30px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-style: oblique;
+            margin-top: 30px;
+            margin-left: 1700px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="main">Admin Home</h1>
+        <a class="logout" href="/home/logout">Logout</a>
+    </div>
+
+    <div class="container">
+        <a href="/admin/add-book">Add Book</a>
+        
+        <a href="/admin/delete-book">Delete Book</a>
+        
+        <a href="/admin/all-books">List All Book</a>
+        
+        <a href="/admin/update-book">Update Book</a>
+
+        <a href="/admin/list-issue-request">All Issue Request</a>
+
+        <a href="/admin/approve-request">Approve Request</a>
+        
+        <a href="/admin/reject-request">Reject Request</a>
+
+    </div>
+</body>
+</html>

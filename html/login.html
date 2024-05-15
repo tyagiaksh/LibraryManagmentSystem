@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<style>
+		.form-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 300px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.login-button{
+			display: flex;
+			align-items: center;
+			margin: 10px;
+			margin-left: 30%;
+			padding: 10px 20px;
+			border: none;
+			background-color: #007bff;
+			color: #fff;
+			font-size: 12px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.login-button:hover {
+			background-color: #022c55;
+		}
+		.box{
+			border-radius: 5px;
+			margin: 10px;
+			padding: 10px 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="form-container">
+		<h2 style="color: rgb(9, 9, 10); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Login</h2>
+		<form action="/home/login" method="post">
+			<input class="box" type="email" placeholder="Email" name="email" required><br>
+
+			<button type="submit" class="login-button">Send OTP</button>
+		</form>
+	</div>
+</body>
+</html>

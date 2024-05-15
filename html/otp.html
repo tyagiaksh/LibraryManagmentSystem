@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP verification</title>
+    <style>
+        .form-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 300px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+        .box input{
+            border-radius: 5px;
+			margin: 10px;
+			padding: 10px 20px;
+        }
+        .login-button{
+			display: flex;
+			align-items: center;
+			margin: 10px;
+			margin-left: 30%;
+			padding: 10px 20px;
+			border: none;
+			background-color: #007bff;
+			color: #fff;
+			font-size: 12px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.login-button:hover {
+			background-color: #022c55;
+		}
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>OTP verification</h1>
+        <form class="box" action="/home/otp" method="post" >
+            <input type="number" placeholder="Enter OTP" name="otp" required>
+            
+            <button class="login-button" type="submit">SignIn</button>
+        </form>
+    </div>
+</body>
+</html>

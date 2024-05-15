@@ -1,0 +1,75 @@
+.box-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.addBook-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 50vh; */
+    height: calc(50vh - 10px);
+    /* width: 50vh; */
+    margin-left: 29%;
+    margin-top: 150px;
+    margin-bottom: 300px;
+    border-radius: 10px;
+    padding-right: 1000px;
+    /* background-color: rgb(3, 252, 252); */
+  }
+  
+.addBook-div h1{
+    font-weight: 300;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: -30px;
+    margin-bottom: 50px;
+  
+  }
+  .link{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 80px;
+    justify-content: space-between;
+    font-size: 23px;
+}
+  
+  button.active {
+    background-color: #007bff;
+    color: #fff;
+    
+  }
+  
+  .group-book {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+  }
+  
+  .group-book input{
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.7rem;
+    background-color: #fff;
+  }
+
+  .group-book input:focus {
+    outline: 1px solid #303030;
+    box-shadow: 0 0 10px #2e2e2e;
+  }
+
+  
+  .btn-3 {   
+    padding: 0.5rem 1rem;
+    background-color: #3b3ef8;
+    color: #f1f1f5;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    width: 180px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  

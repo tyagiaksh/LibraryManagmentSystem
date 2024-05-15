@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve Request</title>
+    <style>
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container input{
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Approve Request</h1>
+        <form class="box" action="/admin/approve-request" method="post" >
+            <input type="number" placeholder="Req ID" name="id" required>
+            <input type="number" placeholder="Approver ID" name="Aid" required>
+            
+            <button class="login-button" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

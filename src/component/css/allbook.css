@@ -1,0 +1,33 @@
+.box-container1{
+    display: flex;
+}
+
+
+
+.book-box1 {
+    display: table;
+    /* justify-content: space-between; */
+    height: 45vh;
+    margin: 20px;
+    /* width: 100%; */
+    border: 1px solid #f1f3f8;
+    border-radius: 10px;
+} 
+
+.List-book{
+    display: table;
+    margin: auto;
+    min-width: 500px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    transition: scroll 0.3s ease-in-out;
+
+}
+
+.image-book {
+    width: 200px;
+    height: 400px;
+    margin: 5px;
+    border:2px solid black;
+    border-radius: 8px;
+}
